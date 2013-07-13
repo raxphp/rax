@@ -1,6 +1,6 @@
 {
     "name": "rax/rax",
-    "description": "The Rax framework.",
+    "description": "Rax PHP Framework",
     "type": "project",
     "license": "BSD-3-Clause",
     "homepage": "http://raxproject.com",

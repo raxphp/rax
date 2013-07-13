@@ -1,2 +1,2 @@
-Rax Framework
-=============
+Rax PHP Framework
+=================
