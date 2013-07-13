@@ -1,0 +1,4 @@
+.idea
+vendor
+composer.lock
+etc/bootstrap/bootstrap.php.cache

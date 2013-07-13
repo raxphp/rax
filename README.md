@@ -1,4 +1,2 @@
-rax
-===
-
-Rax PHP5 Framework
+Rax Framework
+=============

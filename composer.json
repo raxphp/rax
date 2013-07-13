@@ -1,0 +1,17 @@
+{
+    "name": "rax/rax",
+    "description": "The Rax framework.",
+    "type": "project",
+    "license": "BSD-3-Clause",
+    "homepage": "http://raxproject.com",
+    "keywords": ["rax", "framework"],
+    "require": {
+        "php": ">=5.3.3",
+        "rax/core": "~0.0"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.0.1-dev"
+        }
+    }
+}
