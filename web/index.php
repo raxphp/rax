@@ -1,15 +1,19 @@
 <?php
 
+error_reporting(-1);
+ini_set('display_errors', 1);
+
 /**
- * Rax PHP Framework.
+ * The Rax PHP framework.
  *
  * @author  Gregorio Ramirez <goyocode@gmail.com>
- * @license http://opensource.org/licenses/BSD-3-Clause BSD-3-Clause
+ * @license http://opensource.org/licenses/BSD-3-Clause
  */
 
-require __DIR__.'/../etc/bootstrap/paths.php';
-require __DIR__.'/../etc/bootstrap/bootstrap.php.cache';
-require __DIR__.'/../vendor/composer/autoload.php';
+use Rax\App\App;
 
-$app = new App(new ServerMode($_SERVER['SERVER_MODE']));
+/**
+ * @var App $app
+ */
+$app = require __DIR__.'/../etc/bootstrap/app.php';
 $app->run();
