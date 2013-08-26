@@ -13,6 +13,7 @@ use Rax\Bundle\Loader\DirBundleLoader;
 use Rax\Container\Container;
 use Rax\Data\Data;
 use Rax\Data\Loader\FileLoader;
+use Rax\EventManager\CoreEvent;
 use Rax\Server\ServerMode;
 
 define('RAX_START_TIME', microtime(true));
@@ -31,7 +32,6 @@ $dirBundleLoader->setBasename('bundles');
 $bundles = new Bundles($dirBundleLoader->load());
 
 $cfs = new Cfs($bundles, $serverMode);
-$cfs->setInitBasename('bootstrap');
 
 $data = new Data();
 $data->addLoader(new FileLoader('config', $cfs));
@@ -44,8 +44,10 @@ $container->set(array(
     'bundles'         => $bundles,
     'cfs'             => $cfs,
     'config'          => $data,
+    'container'       => $container,
 ));
-$container->autoload->register();
-$container->cfs->loadBundles();
+$container->loadLookup();
+$container->autoload->consume($classLoader)->register();
+$container->eventManager->trigger(CoreEvent::BOOTSTRAP);
 
 return $container->app;
