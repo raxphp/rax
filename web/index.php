@@ -10,5 +10,5 @@ ini_set('display_errors', 1);
  * @license http://opensource.org/licenses/BSD-3-Clause
  */
 
-$app = require __DIR__.'/../etc/bootstrap/app.php';
-$app->run();
+$container = require __DIR__.'/../etc/bootstrap/container.php';
+$container->app->run();

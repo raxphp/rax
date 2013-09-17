@@ -13,16 +13,30 @@ use Rax\Bundle\Loader\DirBundleLoader;
 use Rax\Container\Container;
 use Rax\Data\Data;
 use Rax\Data\Loader\FileLoader;
-use Rax\EventManager\CoreEvent;
 use Rax\Server\ServerMode;
 
 define('RAX_START_TIME', microtime(true));
 define('DS', DIRECTORY_SEPARATOR);
 
+/**
+ * Top level directory paths.
+ */
 require __DIR__.'/paths.php';
 
+/**
+ * Chicken or the egg?
+ *
+ * How do we autoload the autoloader? A: Composer.
+ */
 $classLoader = require VENDOR_DIR.'autoload.php';
 
+/**
+ * The server mode can be defined at the server level:
+ *
+ * - Apache: SetEnv ServerMode development
+ * - Nginx:  fastcgi_param ServerMode development
+ * - Shell:  export ServerMode=development
+ */
 $serverMode = new ServerMode($_SERVER['SERVER_MODE']);
 
 $dirBundleLoader = new DirBundleLoader($serverMode);
@@ -48,6 +62,5 @@ $container->set(array(
 ));
 $container->loadLookup();
 $container->autoload->consume($classLoader)->register();
-$container->eventManager->trigger(CoreEvent::BOOTSTRAP);
 
-return $container->app;
+return $container;

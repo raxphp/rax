@@ -7,9 +7,6 @@
  * @license http://opensource.org/licenses/BSD-3-Clause
  */
 
-/**
- * Top level directory paths.
- */
 define('ROOT_DIR',    dirname(dirname(__DIR__)).'/');
 define('BUNDLES_DIR', ROOT_DIR.'bundles/');
 define('APP_DIR',     BUNDLES_DIR.'app/');
