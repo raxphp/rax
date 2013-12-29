@@ -1,21 +1,21 @@
 # https://www.kernel.org/pub/software/scm/git/docs/git-config.html
 
-[attr]txtConfig text eol=lf whitespace=blank-at-eol,blank-at-eof,-indent-with-non-tab,space-before-tab,tab-in-indent,-cr-at-eol,tabwidth=4 filemode=false
+[attr]txt text eol=lf whitespace=blank-at-eol,blank-at-eof,-indent-with-non-tab,space-before-tab,tab-in-indent,-cr-at-eol,tabwidth=4
 
-[attr]binConfig -text diff
+[attr]bin -text diff
 
-*      text=auto eol=lf
+* text=auto eol=lf
 
-*.php  txtConfig
-*.css  txtConfig
-*.js   txtConfig
-*.json txtConfig
-*.lock txtConfig
-*.md   txtConfig
+*.php  txt
+*.css  txt
+*.js   txt
+*.json txt
+*.lock txt
+*.md   txt
 
-*.gif  binConfig
-*.png  binConfig
-*.jpg  binConfig
-*.gz   binConfig
-*.ico  binConfig
-*.phar binConfig
+*.gif  bin
+*.png  bin
+*.jpg  bin
+*.gz   bin
+*.ico  bin
+*.phar bin
