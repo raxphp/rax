@@ -11,6 +11,7 @@
 *.js   txt
 *.json txt
 *.lock txt
+*.txt  txt
 *.md   txt
 
 *.gif  bin
