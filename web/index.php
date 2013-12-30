@@ -11,4 +11,4 @@ ini_set('display_errors', 1);
  */
 
 $container = require __DIR__.'/../etc/bootstrap/container.php';
-$container->app->run();
+$container->eventManager->trigger('core.app');
