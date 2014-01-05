@@ -1,6 +1,6 @@
 .idea
 vendor
-bundles/core
+bundle/core
 composer.lock
 etc/storage/cache/*
 etc/storage/logs/*

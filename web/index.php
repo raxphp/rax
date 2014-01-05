@@ -1,5 +1,7 @@
 <?php
 
+use Rax\EventManager\CoreEvent;
+
 error_reporting(-1);
 ini_set('display_errors', 1);
 
@@ -11,4 +13,4 @@ ini_set('display_errors', 1);
  */
 
 $container = require __DIR__.'/../etc/bootstrap/container.php';
-$container->eventManager->trigger('core.app');
+$container->eventManager->trigger(CoreEvent::APP);

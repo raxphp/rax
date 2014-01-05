@@ -21,7 +21,7 @@ define('DS', DIRECTORY_SEPARATOR);
 /**
  * Top level directory paths.
  */
-require __DIR__.'/paths.php';
+require __DIR__.'/path.php';
 
 /**
  * Which came first, the chicken or the egg?
@@ -41,7 +41,7 @@ $serverMode = new ServerMode($_SERVER['SERVER_MODE']);
 
 $dirBundleLoader = new DirBundleLoader($serverMode);
 $dirBundleLoader->setDir(APP_DIR.'config');
-$dirBundleLoader->setBasename('bundles');
+$dirBundleLoader->setBasename('bundle');
 
 $bundles = new Bundles($dirBundleLoader->load());
 

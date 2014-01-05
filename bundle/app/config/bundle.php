@@ -6,10 +6,10 @@
 return array(
     'App'  => array(
         'enabled' => true,
-        'path'    => BUNDLES_DIR.'app',
+        'path'    => BUNDLE_DIR.'app',
     ),
     'Core' => array(
         'enabled' => true,
-        'path'    => BUNDLES_DIR.'core',
+        'path'    => BUNDLE_DIR.'core',
     ),
 );
