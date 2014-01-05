@@ -1,8 +1,8 @@
 .idea
 vendor
+bundles/core
 composer.lock
 etc/storage/cache/*
 etc/storage/logs/*
 etc/storage/uploads/*
 etc/bootstrap/bootstrap.php.cache
-core
