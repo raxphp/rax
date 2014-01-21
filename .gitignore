@@ -3,6 +3,6 @@ vendor
 bundle/core
 composer.lock
 etc/storage/cache/*
-etc/storage/logs/*
-etc/storage/uploads/*
+etc/storage/log/*
+etc/storage/upload/*
 etc/bootstrap/bootstrap.php.cache

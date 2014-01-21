@@ -8,8 +8,8 @@
     "autoload": {
         "psr-0": {
             "Rax\\": [
-                "bundles/app/src/",
-                "bundles/core/src/"
+                "bundle/app/src/",
+                "bundle/core/src/"
             ]
         }
     },
