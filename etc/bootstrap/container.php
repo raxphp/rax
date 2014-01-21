@@ -51,16 +51,18 @@ $config = new Config();
 $config->addLoader(new FileLoader('config', $cfs));
 
 $container = new Container($config);
-$container->set(array(
-    'classLoader'     => $classLoader,
-    'serverMode'      => $serverMode,
-    'disBundleLoader' => $dirBundleLoader,
-    'bundles'         => $bundles,
-    'cfs'             => $cfs,
-    'config'          => $config,
-    'container'       => $container,
-));
-$container->loadLookup();
-$container->autoload->consume($classLoader)->register();
+$container
+    ->set(array(
+        $classLoader,
+        $serverMode,
+        $dirBundleLoader,
+        $bundles,
+        $cfs,
+        $config,
+        $container,
+    ))
+    ->autoload
+        ->consume($classLoader)
+        ->register();
 
 return $container;
