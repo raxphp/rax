@@ -24,7 +24,7 @@ define('DS', DIRECTORY_SEPARATOR);
 require __DIR__.'/path.php';
 
 /**
- * Which came first, the chicken or the egg?
+ * Chicken or the egg?
  *
  * We use Composer to autoload the autoloader.
  */
@@ -61,7 +61,7 @@ $container
         $config,
         $container,
     ))
-    ->autoload
+    ->autoloader
         ->consume($classLoader)
         ->register();
 
